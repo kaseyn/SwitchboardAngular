@@ -1,0 +1,6 @@
+<h1>{{ title }}</h1>
+<div *ngFor="let x of switches; let i = index" class= switch>
+  <button (click)="switch(i)" *ngIf='switches[i]' [ngClass]="{'on' : switches[i]}">On</button>
+  <button (click)="switch(i)" *ngIf='!switches[i]'>Off</button>
+</div>
+
